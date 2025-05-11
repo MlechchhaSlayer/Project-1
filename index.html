@@ -14,7 +14,7 @@
         function verifyAnswer() {
             const answer = document.getElementById("answer").value.toLowerCase();
             if (answer.includes("favorite") && (answer.includes("movie") || answer.includes("show"))) {
-                window.location.href = "success.html"; // Redirect to success page
+                window.location.assign("./success.html"); // Redirect to success page
             } else {
                 alert("Incorrect answer. Try again.");
             }
