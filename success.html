@@ -8,32 +8,28 @@
         @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@300&display=swap');
 
         body {
-            font-family: 'Open Sans', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
             margin: 0;
-            background: linear-gradient(135deg, #ffe4e1, #ffb6c1);
+            padding: 0;
+            font-family: 'Merriweather', serif;
+            background: #ffe4e1;
             overflow: hidden;
         }
 
         #container {
             text-align: center;
-            width: 90%; /* Flexible width to fit smaller screens */
-            max-width: 350px; /* Prevents it from growing too large */
+            width: 90%; /* Flexible width */
+            max-width: 350px;
             background: linear-gradient(145deg, #fff0f5, #ffe4e1);
-            padding: 20px 10px; /* Adjusted padding for better visibility */
-            margin: 20px auto; /* Centered with top and bottom spacing */
+            padding: 20px;
+            margin: 20px auto;
             border-radius: 20px;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
             position: relative;
             z-index: 2;
             opacity: 0.9;
             border: 2px solid #ffb6c1;
-            box-sizing: border-box; /* Ensures padding doesn't overflow */
-            overflow-wrap: break-word; /* Prevents long text from breaking layout */
-            min-height: 200px; /* Ensures enough height for text */
+            box-sizing: border-box;
+            overflow-wrap: break-word;
         }
      
         h2 {
@@ -44,12 +40,11 @@
         }
 
         p {
-            margin: 12px 0;
+            margin: 10px 0;
             color: #555;
-            line-height: 1.8;
-            font-size: 1.2em;
-            font-family: 'Merriweather', serif;
-            font-style: italic;
+            line-height: 1.6;
+            font-size: 1.1em;
+            word-wrap: break-word;
         }
 
         
@@ -64,24 +59,23 @@
             padding: 10px 18px;
             border-radius: 10px;
             text-decoration: none;
-            display: inline-block;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
             margin-top: 15px;
             transition: background-color 0.3s ease;
-            font-family: 'Merriweather', serif;
         }
 
         .number:hover {
             background-color: #1EBE56;
         }
 
-
-
         .heart {
+            font-size: 3em;
             color: #d6336c;
-            font-size: 2em;
-            position: absolute;
-            top: 25px; /* Moved slightly downward */
-            left: calc(50% - 10px);
+            margin: 10px auto;
+            position: relative;
+            top: 10px; /* Adjusted for better placement */
         }
 
 
@@ -131,23 +125,27 @@
         }
 
 
-        .number {
-            font-weight: bold;
-            color: white;
-            background-color: #25D366;
-            padding: 10px 18px;
-            border-radius: 10px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-            font-family: 'Merriweather', serif;
-        }
+        @media only screen and (max-width: 600px) {
+            #container {
+                width: 95%; /* Expand slightly on smaller screens */
+                padding: 15px;
+                margin: 10px auto;
+            }
 
-        .number:hover {
-            background-color: #1EBE56;
+            p {
+                font-size: 1em;
+                line-height: 1.4;
+            }
+
+            .number {
+                padding: 8px 14px;
+                font-size: 0.9em;
+            }
+
+            .heart {
+                font-size: 2.5em;
+                top: 5px;
+            }
         }
 
 
@@ -181,7 +179,7 @@
         </p>
         <p>
             If we're on same page, here’s my contact:  
-            <a href="https://wa.me/+918769247288" class="number" target="_blank">
+            <a href="https://wa.me/123456789" class="number" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 5px;">
                 You know you wanna click 😌
             </a>
