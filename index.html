@@ -13,7 +13,7 @@
     <script>
         function verifyAnswer() {
             const answer = document.getElementById("answer").value.toLowerCase();
-            if (answer.includes("favorite") && (answer.includes("movie") || answer.includes("show"))) {
+            if (answer.includes("favorite") || (answer.includes("movie") || answer.includes("show"))) {
                 window.location.assign("./success.html"); // Redirect to success page
             } else {
                 alert("Incorrect answer. Try again.");
