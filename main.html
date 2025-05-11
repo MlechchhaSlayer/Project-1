@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Verification</title>
+    <style>
+        body { font-family: Arial, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; }
+        #container { text-align: center; max-width: 400px; }
+        input { margin: 10px 0; padding: 8px; width: 100%; }
+        button { padding: 8px 16px; }
+    </style>
+    <script>
+        function verifyAnswer() {
+            const answer = document.getElementById("answer").value.toLowerCase();
+            if (answer.includes("favorite") && (answer.includes("movie") || answer.includes("show"))) {
+                window.location.href = "success.html"; // Redirect to success page
+            } else {
+                alert("Incorrect answer. Try again.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h2>What was the one question I frequently used to ask you during my training?</h2>
+        <input type="text" id="answer" placeholder="Enter your answer here">
+        <button onclick="verifyAnswer()">Submit</button>
+    </div>
+</body>
+</html>
