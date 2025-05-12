@@ -47,13 +47,20 @@
     </style>
     <script>
         function verifyAnswer() {
-            const answer = document.getElementById("answer").value.toLowerCase();
-            if (answer.includes("favorite") || answer.includes("movie") || answer.includes("show")) {
-                window.location.assign("./success.html");
+            const answer = document.getElementById("answer").value.toLowerCase().trim();
+            // Valid keywords as regular expressions to match whole words only
+            const validAnswers = ["\\bmovie\\b", "\\bmovies\\b", "\\bshow\\b", "\\bserial\\b", "\\btv\\b", "\\btelevision\\b", "\\bseries\\b", "\\bweb-series\\b"];
+
+            // Check if any valid keyword as a whole word is present in the answer
+            if (validAnswers.some(word => new RegExp(word).test(answer))) {
+                window.location.assign("./success.html"); // Redirect to success page
             } else {
                 alert("Incorrect answer. Try again.");
             }
         }
+
+
+    
         document.addEventListener("DOMContentLoaded", function() {
             const input = document.getElementById("answer");
             input.addEventListener("keypress", function(event) {
@@ -70,6 +77,9 @@
         <input type="text" id="answer" placeholder="Enter your answer here">
         <button onclick="verifyAnswer()">Submit</button>
     </div>
+
+
+
 </body>
 </html>
 
