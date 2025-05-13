@@ -4,152 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Message</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Open+Sans:wght@300&display=swap');
-
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Merriweather', serif;
-            background: #ffe4e1;
-            overflow: hidden;
-        }
-
-        #container {
-            text-align: center;
-            width: 90%; /* Flexible width */
-            max-width: 350px;
-            background: linear-gradient(145deg, #fff0f5, #ffe4e1);
-            padding: 20px;
-            margin: 20px auto;
-            border-radius: 20px;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-            position: relative;
-            z-index: 2;
-            opacity: 0.9;
-            border: 2px solid #ffb6c1;
-            box-sizing: border-box;
-            overflow-wrap: break-word;
-        }
-     
-        h2 {
-            margin-bottom: 20px;
-            color: #d6336c;
-            font-size: 2.2em;
-            font-family: 'Dancing Script', cursive;
-        }
-
-        p {
-            margin: 10px 0;
-            color: #555;
-            line-height: 1.6;
-            font-size: 1.1em;
-            word-wrap: break-word;
-        }
-
-        
-        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Merriweather:ital@1&display=swap');
-
-
-
-        .number {
-            font-weight: bold;
-            color: white;
-            background-color: #25D366;
-            padding: 10px 18px;
-            border-radius: 10px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            margin-top: 15px;
-            transition: background-color 0.3s ease;
-        }
-
-        .number:hover {
-            background-color: #1EBE56;
-        }
-
-        .heart {
-            font-size: 3em;
-            color: #d6336c;
-            margin: 10px auto;
-            position: relative;
-            top: 10px; /* Adjusted for better placement */
-        }
-
-
-
-        /* Balloons and Glitter */
-        .balloon, .glitter {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.7;
-            animation: float 5s ease-in-out infinite;
-        }
-
-        .glitter {
-            width: 8px;
-            height: 8px;
-            background-color: gold;
-            animation-duration: 4s;
-        }
-
-        /* Balloons and Glitter */
-        .balloon {
-            position: absolute;
-            border-radius: 50%;
-            opacity: 0.7;
-            animation: float 5s ease-in-out infinite;
-            width: 20px;
-            height: 30px;
-        }
-
-        @keyframes float {
-            0% { transform: translateY(100vh) scale(0.8); }
-            100% { transform: translateY(-100vh) scale(1); }
-        }
-
-        /* Different colors for balloons */
-        .balloon:nth-child(1) { background-color: #ff69b4; }
-        .balloon:nth-child(2) { background-color: #ff6347; }
-        .balloon:nth-child(3) { background-color: #ffa07a; }
-        .balloon:nth-child(4) { background-color: #ff4500; }
-        .balloon:nth-child(5) { background-color: #db7093; }
-        .balloon:nth-child(6) { background-color: #ff8c00; }
-        .balloon:nth-child(7) { background-color: #ff1493; }
-
-        .balloon {
-            left: calc(10% + 80% * var(--rand)); /* Random horizontal position */
-            animation-duration: calc(4s + 4s * var(--rand)); /* Random speed */
-        }
-
-
-        @media only screen and (max-width: 600px) {
-            #container {
-                width: 95%; /* Expand slightly on smaller screens */
-                padding: 15px;
-                margin: 10px auto;
-            }
-
-            p {
-                font-size: 1em;
-                line-height: 1.4;
-            }
-
-            .number {
-                padding: 8px 14px;
-                font-size: 0.9em;
-            }
-
-            .heart {
-                font-size: 2.5em;
-                top: 5px;
-            }
-        }
-
-
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Floating Balloons with Random Colors and Positions -->
@@ -166,8 +21,8 @@
 
     <!-- Message Container -->
     <div id="container">
-        <div class="heart" style="padding-top: 3.5%;">❤️</div>
-        <h2 style="padding-top: 10%">Hi,Cutie</h2>
+        <div class="heart" style="padding-top: 2.5%;">❤️</div>
+        <h2 style="padding-top: 1.5%">Hi, Cutie</h2>
         <p>
             How are you? I hope you’re doing well. Since I left, I've felt this weight — not expressing how I feel about you. It’s been on my mind, and I realized It's not fair to keep it to myself.
         </p>
@@ -178,19 +33,16 @@
             I’ve been holding this in for a while, but I didn’t want to leave without telling you how I feel. I think you’re amazing, and I’d like to get to know you better if you’re open to it.
         </p>
         <p>
-            I was actually planning to give this to you in person, but HR decided to play Cupid’s villain and ended my notice period early. Guess they didn’t want me hanging around — probably noticed the way I looked at you and thought, Not on my watch.
+            I was actually planning to give this to you in person, but HR decided to play Cupid’s villain and ended my notice period early. Guess they didn’t want me hanging around — probably noticed the way I looked at you and thought, Not on my watch.😂
         </p>
         <p>
-            Anyways, If we're on same page, here’s my contact
-            <a href="https://wa.me/123456789" class="number" target="_blank">
+            Anyways, If we're on the same page, here’s my contact <br>
+            <a href="https://wa.me/123456789?text=Okay%2C%20you%20clicked!%20Now%20it%E2%80%99s%20your%20turn%20to%20surprise%20me...%20%F0%9F%98%8F" class="number" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" style="vertical-align: middle; margin-right: 5px;">
                 You know you wanna click 😌
             </a> <br> <br>
             With Love (Hope It's not too cheesy😁 lemme know)
         </p>
-        
-        
     </div>
 </body>
 </html>
-
