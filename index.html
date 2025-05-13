@@ -53,9 +53,10 @@
 
             // Check if any valid keyword as a whole word is present in the answer
             if (validAnswers.some(word => new RegExp(word).test(answer))) {
+                alert("Wow! Someone remembers🫣");
                 window.location.assign("./success.html"); // Redirect to success page
             } else {
-                alert("Wrong. What is this behaviour yrr😐");
+                alert("Incorrect answer. Try again.");
             }
         }
 
