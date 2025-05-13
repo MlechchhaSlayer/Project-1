@@ -49,42 +49,86 @@
         button:hover {
             background-color: #45a049;
         }
-    </style>
-    <script>
-        function verifyAnswer() {
-            const answer = document.getElementById("answer").value.toLowerCase().trim();
-            // Valid keywords as regular expressions to match whole words only
-            const validAnswers = ["\\bmovie\\b", "\\bmovies\\b", "\\bshow\\b", "\\bserial\\b", "\\btv\\b", "\\btelevision\\b", "\\bseries\\b", "\\bweb-series\\b"];
 
-            // Check if any valid keyword as a whole word is present in the answer
-            if (validAnswers.some(word => new RegExp(word).test(answer))) {
+        .mail-support {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+
+        .mail-button {
+            display: inline-flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: limegreen;
+            color: white;
+            text-decoration: none;
+            border-radius: 50%;
+            transition: background-color 0.3s ease;
+            font-size: 0.9em;
+            gap: 8px;
+        }
+
+        .mail-icon {
+            width: 20px;
+            height: 20px;
+            
+        }
+
+        .mail-button:hover {
+            background-color: #0056b3;
+        }
+
+    </style>
+
+
+    <script>
+        function verifyFirstAnswer() {
+            const answer1 = document.getElementById("answer1").value.toLowerCase().trim();
+            const validAnswers1 = ["\\bmovie\\b", "\\bmovies\\b", "\\bshow\\b", "\\bserial\\b", "\\btv\\b", "\\btelevision\\b", "\\bseries\\b", "\\bweb-series\\b"];
+            
+            if (validAnswers1.some(word => new RegExp(word).test(answer1))) {
+                document.getElementById("second-question").style.display = "block";
+            } else {
+                alert("Incorrect answer. Try again.");
+            }
+        }
+    
+        function verifySecondAnswer() {
+            const answer2 = document.getElementById("answer2").value.toLowerCase().trim();
+            const validAnswers2 = ["\\bsleep\\b", "\\bsoti\\b", "\\bsleeping\\b", "\\bneend\\b", "\\bnind\\b"];
+            if (validAnswers2.some(word => new RegExp(word).test(answer2))) {
                 alert("“If curiosity got you here, maybe love will keep you around.🫣");
                 window.location.assign("./success.html"); // Redirect to success page
             } else {
                 alert("Incorrect answer. Try again.");
             }
         }
-
-
-    
-        document.addEventListener("DOMContentLoaded", function() {
-            const input = document.getElementById("answer");
-            input.addEventListener("keypress", function(event) {
-                if (event.key === "Enter") {
-                    verifyAnswer();
-                }
-            });
-        });
     </script>
+    
 </head>
-<body>
+<body> 
     <div id="container">
-        <h2>What was the one question I frequently used to ask you during Buddy-Up? (Obviously its not work related.)</h2>
-        <input type="text" id="answer" placeholder="Enter your answer here">
-        <button onclick="verifyAnswer()">Submit</button>
+        <h2>What was the one question I frequently used to ask you during Budyy-Up?(Obviously not work related)</h2>
+        <input type="text" id="answer1" placeholder="Enter your answer here" onkeydown="if(event.key === 'Enter') verifyFirstAnswer();">
+        <button onclick="verifyFirstAnswer()">Submit</button>
+        <div id="second-question" style="display: none;">
+            <h2>Weekends par kya karti ho?(As per our last awkward convo🫠)</h2>
+            <input type="text" id="answer2" placeholder="Enter your answer here" onkeydown="if(event.key === 'Enter') verifySecondAnswer();">
+            <button onclick="verifySecondAnswer()">Submit</button>
+        </div>
+        
+        
     </div>
-
-
+    
+    <div class="mail-support">
+        <a href="mailto:abc@gmail.com" class="mail-button">
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/email.png" alt="Mail" class="mail-icon">
+            
+        </a>
+    </div>
+    
+    
 
 </body>
 </html>
